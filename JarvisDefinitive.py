@@ -703,6 +703,16 @@ def main():
     # Manejo de errores
     app.add_error_handler(error_handler)
 
+    # Permitir que el bot responda en grupos
+    app.bot.set_my_commands([
+        ("start", "Inicia el bot"),
+        ("web", "Busca en la web"),
+        ("img", "Genera una imagen"),
+        ("roll", "Inicia roleplay"),
+        ("whatif", "¿Qué pasaría si...?"),
+        ("future", "Predice tu futuro"),
+    ])
+
     print("✅ JARVIS AI listo! Búscalo en Telegram\n")
     app.run_polling()
 
