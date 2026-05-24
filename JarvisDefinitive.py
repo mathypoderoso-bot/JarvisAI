@@ -1,5 +1,4 @@
 import os
-from dotenv import load_dotenv
 import requests
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
@@ -7,10 +6,6 @@ from groq import Groq
 import urllib.parse
 import base64
 
-# ============================================
-# CARGAR VARIABLES DE ENTORNO
-# ============================================
-load_dotenv()
 
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
